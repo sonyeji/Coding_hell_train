@@ -4,6 +4,16 @@ public class Employee {
 	private GeneralInfoManagement generalInfo = new GeneralInfoManagement();
 	private CompanyInfoManagement companyInfo = new	CompanyInfoManagement();
 	private AttendanceInfoManagement attendanceInfo = new AttendanceInfoManagement();
+	
+	public GeneralInfoManagement getGeneralInfo() {
+		return generalInfo;
+	}
+	public CompanyInfoManagement getCompanyInfo() {
+		return companyInfo;
+	}
+	public AttendanceInfoManagement getAttendanceInfo() {
+		return attendanceInfo;
+	}
 }
 
 class GeneralInfoManagement {

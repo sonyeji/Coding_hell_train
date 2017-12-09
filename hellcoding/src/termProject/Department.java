@@ -1,9 +1,11 @@
 package termProject;
 
 // Sales , Technical , General Affairs , Human Resource , Lab , Management
-// ¿µ¾÷ , ±â¼ú , ÃÑ¹« , ÀÎ»ç , °³¹ß , È¸°è
+// ì˜ì—… , ê¸°ìˆ  , ì´ë¬´ , ì¸ì‚¬ , ê°œë°œ , íšŒê³„
 
 public class Department {
+	public static final Department NIL = new Department();
+	
 	public static final String[] Departments = {
 			"Sales",
 			"Technical",
@@ -12,4 +14,39 @@ public class Department {
 			"Lab",
 			"Management"
 	};
+	public static final int[] Commissions = {
+			100,
+			400,
+			300,
+			500,
+			600,
+			400
+	};
+	
+	private String name;
+	private int commission;
+	
+	public Department (String depart) {
+		for (int i=0; i<Departments.length; i++) {
+			if (Departments[i].equals(depart)) {
+				this.name = Departments[i];
+				this.commission = Commissions[i];
+				return;
+			}
+		}
+		this.name = "NULL";
+		this.commission = 0;
+	}
+	
+	public int getCommission() {
+		return this.commission;
+	}
+	public String toString() {
+		return this.name;
+	}
+	
+	private Department () {
+		this.name = "NULL";
+		this.commission = 0;
+	}
 }

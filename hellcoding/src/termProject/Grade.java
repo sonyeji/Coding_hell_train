@@ -1,7 +1,7 @@
 package termProject;
 
 // Staff - AssistantManager - Manager - DeputyGeneralManager - GeneralManager
-// »ç¿ø - ´ë¸® - °úÀå - Â÷Àå - ºÎÀå
+// ì‚¬ì› - ëŒ€ë¦¬ - ê³¼ìž¥ - ì°¨ìž¥ - ë¶€ìž¥
 
 public class Grade {
 	public static final String[] Grades = {
@@ -27,13 +27,25 @@ public class Grade {
 	}
 	
 	public Grade (int grade) {
-		this.grade = grade;
-		this.name = Grades[grade];
-		this.salary = Salaries[grade];
+		if (grade >= Grades.length) {
+			this.grade = 0;
+			this.name = Grades[0];
+			this.salary = Salaries[0];
+		} else {
+			this.grade = grade;
+			this.name = Grades[grade];
+			this.salary = Salaries[grade];
+		}
 	}
 	
 	public int changeGrade (int gradeToChange) {
 		int oldGrade = this.grade;
+		if (gradeToChange >= Grades.length) {
+			this.grade = 0;
+			this.name = Grades[0];
+			this.salary = Salaries[0];
+			return oldGrade;
+		}
 		this.grade = gradeToChange;
 		this.name = Grades[gradeToChange];
 		this.salary = Salaries[gradeToChange];
@@ -43,12 +55,10 @@ public class Grade {
 	public int getGrade () {
 		return this.grade;
 	}
-	
-	public String getGradeName () {
-		return this.name;
-	}
-	
 	public int getGradeSalary () {
 		return this.salary;
+	}
+	public String toString () {
+		return this.name;
 	}
 }
