@@ -52,6 +52,7 @@ class CompanyInfoManagement {
 	private int id;
 	private Grade grade;
 	private Department depart;
+	private Workplace workplace;
 	public int getId() {
 		return id;
 	}
@@ -69,6 +70,12 @@ class CompanyInfoManagement {
 	}
 	public void setDepart(Department depart) {
 		this.depart = depart;
+	}
+	public Workplace getWorkplace() {
+		return workplace;
+	}
+	public void setWorkplace (Workplace workplace) {
+		this.workplace = workplace;
 	}
 }
 

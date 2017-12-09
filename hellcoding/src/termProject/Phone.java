@@ -18,8 +18,8 @@ public class Phone {
 		}
 		number = first_number + delimiter;
 		
-		if (phoneNumber.contains("-")) {
-			StringTokenizer tokens = new StringTokenizer(phoneNumber, "-");
+		if (phoneNumber.contains(delimiter)) {
+			StringTokenizer tokens = new StringTokenizer(phoneNumber, delimiter);
 			tokens.nextToken();
 			number += tokens.nextToken() + delimiter;
 			number += tokens.nextToken();

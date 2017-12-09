@@ -9,7 +9,7 @@ public class Grade {
 			"Assistant Manager",
 			"Manager",
 			"Deputy General Manager",
-			"General Manager",
+			"General Manager"
 	};
 	public static final int[] Salaries = {
 			100,
@@ -21,36 +21,11 @@ public class Grade {
 	private String name;
 	private int salary;
 	private int grade;
-	
-	public Grade () {
-		this(0);
-	}
-	
-	public Grade (int grade) {
-		if (grade >= Grades.length) {
-			this.grade = 0;
-			this.name = Grades[0];
-			this.salary = Salaries[0];
-		} else {
-			this.grade = grade;
-			this.name = Grades[grade];
-			this.salary = Salaries[grade];
-		}
-	}
-	
-	public int changeGrade (int gradeToChange) {
-		int oldGrade = this.grade;
-		if (gradeToChange >= Grades.length) {
-			this.grade = 0;
-			this.name = Grades[0];
-			this.salary = Salaries[0];
-			return oldGrade;
-		}
-		this.grade = gradeToChange;
-		this.name = Grades[gradeToChange];
-		this.salary = Salaries[gradeToChange];
-		return oldGrade;
-	}
+	public static final Grade gradeStaff = new Grade(0);
+	public static final Grade gradeAssistantManager = new Grade(1);
+	public static final Grade gradeManager = new Grade(2);
+	public static final Grade gradeDeputyGeneralManager = new Grade(3);
+	public static final Grade gradeGeneralManager = new Grade(4);
 	
 	public int getGrade () {
 		return this.grade;
@@ -60,5 +35,17 @@ public class Grade {
 	}
 	public String toString () {
 		return this.name;
+	}
+	
+	private Grade (int grade) {
+		if (grade >= Grades.length) {
+			this.grade = 0;
+			this.name = Grades[0];
+			this.salary = Salaries[0];
+		} else {
+			this.grade = grade;
+			this.name = Grades[grade];
+			this.salary = Salaries[grade];
+		}
 	}
 }
