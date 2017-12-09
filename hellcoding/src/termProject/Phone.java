@@ -7,14 +7,15 @@ public class Phone {
 	private final String delimiter = "-";
 	private String number;
 	
-	public Phone() {
-		number = first_number + delimiter + "0000" + delimiter + "0000";
-	}
 	public Phone(String phoneNumber) {
 		editNumber(phoneNumber);
 	}
-	
 	public void editNumber (String phoneNumber) {
+		if (phoneNumber.length() != 11
+			&& phoneNumber.length() != 13) {
+			number = "000" + delimiter + "0000" + delimiter + "0000";
+			return;
+		}
 		number = first_number + delimiter;
 		
 		if (phoneNumber.contains("-")) {
@@ -27,7 +28,6 @@ public class Phone {
 			number += phoneNumber.substring(7, 11);
 		}
 	}
-	
 	public String toString () {
 		return number;
 	}

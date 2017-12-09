@@ -4,8 +4,6 @@ package termProject;
 // 영업 , 기술 , 총무 , 인사 , 개발 , 회계
 
 public class Department {
-	public static final Department NIL = new Department();
-	
 	public static final String[] Departments = {
 			"Sales",
 			"Technical",
@@ -43,10 +41,5 @@ public class Department {
 	}
 	public String toString() {
 		return this.name;
-	}
-	
-	private Department () {
-		this.name = "NULL";
-		this.commission = 0;
 	}
 }
