@@ -1,10 +1,8 @@
 package termProject;
 
-import java.util.LinkedList;
-import java.util.List;
-
 public class Workplace {
 	public static String[] Places = {
+			"Unknown Place",
 			"Seoul",
 			"Daejeon",
 			"Daegu",
@@ -13,11 +11,12 @@ public class Workplace {
 	};
 	private String name;
 	
-	public static final Workplace workplaceSeoul = new Workplace (Places[0]);
-	public static final Workplace workplaceDaejeon = new Workplace (Places[1]);
-	public static final Workplace workplaceDaegu = new Workplace (Places[2]);
-	public static final Workplace workplaceBusan = new Workplace (Places[3]);
-	public static final Workplace workplaceJeju = new Workplace (Places[4]);
+	public static final Workplace workplaceUnknown = new Workplace (Places[0]);
+	public static final Workplace workplaceSeoul = new Workplace (Places[1]);
+	public static final Workplace workplaceDaejeon = new Workplace (Places[2]);
+	public static final Workplace workplaceDaegu = new Workplace (Places[3]);
+	public static final Workplace workplaceBusan = new Workplace (Places[4]);
+	public static final Workplace workplaceJeju = new Workplace (Places[5]);
 	
 	public String toString () {
 		return this.name;

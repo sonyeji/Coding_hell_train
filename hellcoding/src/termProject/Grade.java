@@ -5,6 +5,7 @@ package termProject;
 
 public class Grade {
 	public static final String[] Grades = {
+			"Unknown Grade",
 			"Staff",
 			"Assistant Manager",
 			"Manager",
@@ -12,6 +13,7 @@ public class Grade {
 			"General Manager"
 	};
 	public static final int[] Salaries = {
+			0,
 			100,
 			200,
 			300,
@@ -21,11 +23,12 @@ public class Grade {
 	private String name;
 	private int salary;
 	private int grade;
-	public static final Grade gradeStaff = new Grade(0);
-	public static final Grade gradeAssistantManager = new Grade(1);
-	public static final Grade gradeManager = new Grade(2);
-	public static final Grade gradeDeputyGeneralManager = new Grade(3);
-	public static final Grade gradeGeneralManager = new Grade(4);
+	public static final Grade gradeUnknown = new Grade(0);
+	public static final Grade gradeStaff = new Grade(1);
+	public static final Grade gradeAssistantManager = new Grade(2);
+	public static final Grade gradeManager = new Grade(3);
+	public static final Grade gradeDeputyGeneralManager = new Grade(4);
+	public static final Grade gradeGeneralManager = new Grade(5);
 	
 	public int getGrade () {
 		return this.grade;

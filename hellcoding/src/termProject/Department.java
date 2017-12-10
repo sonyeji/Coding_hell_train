@@ -7,6 +7,7 @@ public class Department {
 	private String name;
 	private int commission;
 	public static final String[] Departments = {
+			"Unknown Department",
 			"Sales",
 			"Technical",
 			"General Affairs",
@@ -15,6 +16,7 @@ public class Department {
 			"Management"
 	};
 	public static final int[] Commissions = {
+			0,
 			100,
 			400,
 			300,
@@ -22,12 +24,13 @@ public class Department {
 			600,
 			400
 	};
-	public static final Department departSales = new Department (Departments[0]);
-	public static final Department departTechnical = new Department (Departments[1]);
-	public static final Department departGeneralAffairs = new Department (Departments[2]);
-	public static final Department departHumanResource = new Department (Departments[3]);
-	public static final Department departLab = new Department (Departments[4]);
-	public static final Department departManagement = new Department (Departments[5]);
+	public static final Department departUnknown = new Department (Departments[0]);
+	public static final Department departSales = new Department (Departments[1]);
+	public static final Department departTechnical = new Department (Departments[2]);
+	public static final Department departGeneralAffairs = new Department (Departments[3]);
+	public static final Department departHumanResource = new Department (Departments[4]);
+	public static final Department departLab = new Department (Departments[5]);
+	public static final Department departManagement = new Department (Departments[6]);
 	
 	public int getCommission() {
 		return this.commission;
