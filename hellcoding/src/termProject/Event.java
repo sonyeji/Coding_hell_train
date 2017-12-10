@@ -3,7 +3,13 @@ package termProject;
 public class Event {
 	protected int startDay;
 	protected int endDay;
-	protected String comment;
+	private String comment;
+	
+	public Event () {
+		this.startDay = 0;
+		this.endDay = 0;
+		this.comment = "";
+	}
 	
 	public Event (int startDay, int endDay, String comment) {
 		this.startDay = startDay;

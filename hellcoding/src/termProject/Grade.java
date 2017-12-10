@@ -14,11 +14,11 @@ public class Grade {
 	};
 	public static final int[] Salaries = {
 			0,
-			100,
-			200,
-			300,
-			400,
-			500
+			1000,
+			1400,
+			2100,
+			3200,
+			4100
 	};
 	private String name;
 	private int salary;
@@ -35,6 +35,7 @@ public class Grade {
 		switch (number) {
 		case 1:
 			tmp = gradeStaff;
+			break;
 		case 2:
 			tmp = gradeAssistantManager;
 			break;

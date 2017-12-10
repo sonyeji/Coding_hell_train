@@ -17,12 +17,12 @@ public class Department {
 	};
 	public static final int[] Commissions = {
 			0,
-			100,
-			400,
-			300,
-			500,
-			600,
-			400
+			1,
+			3,
+			2,
+			5,
+			6,
+			4
 	};
 	public static final Department departUnknown = new Department (Departments[0]);
 	public static final Department departSales = new Department (Departments[1]);

@@ -3,8 +3,9 @@ package termProject;
 public class Leave extends Event {
 	private Employee emp;
 	
-	public Leave (Employee emp, int startDay, int endDay, String comment) {
-		super(startDay, endDay, comment);
+	public Leave (Employee emp, int startDay, int endDay) {
+		this.startDay = startDay;
+		this.endDay = endDay;
 		this.emp = emp;
 	}
 
