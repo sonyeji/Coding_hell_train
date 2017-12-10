@@ -18,6 +18,30 @@ public class Workplace {
 	public static final Workplace workplaceBusan = new Workplace (Places[4]);
 	public static final Workplace workplaceJeju = new Workplace (Places[5]);
 	
+	public static Workplace getWorkplaceByNumber (int number) {
+		Workplace tmp;
+		switch (number) {
+		case 1:
+			tmp = workplaceSeoul;
+			break;
+		case 2:
+			tmp = workplaceDaejeon;
+			break;
+		case 3:
+			tmp = workplaceDaegu;
+			break;
+		case 4:
+			tmp = workplaceBusan;
+			break;
+		case 5:
+			tmp = workplaceJeju;
+			break;
+		default :
+			tmp = workplaceUnknown;
+		}
+		return tmp;
+	}
+	
 	public String toString () {
 		return this.name;
 	}

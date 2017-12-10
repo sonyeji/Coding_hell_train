@@ -30,6 +30,29 @@ public class Grade {
 	public static final Grade gradeDeputyGeneralManager = new Grade(4);
 	public static final Grade gradeGeneralManager = new Grade(5);
 	
+	public static Grade getGradeByNumber (int number) {
+		Grade tmp;
+		switch (number) {
+		case 1:
+			tmp = gradeStaff;
+		case 2:
+			tmp = gradeAssistantManager;
+			break;
+		case 3:
+			tmp = gradeManager;
+			break;
+		case 4:
+			tmp = gradeDeputyGeneralManager;
+			break;
+		case 5:
+			tmp = gradeGeneralManager;
+			break;
+		default :
+			tmp = gradeUnknown;
+		}
+		return tmp;
+	}
+	
 	public int getGrade () {
 		return this.grade;
 	}

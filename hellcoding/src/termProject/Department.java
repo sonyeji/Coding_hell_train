@@ -32,6 +32,33 @@ public class Department {
 	public static final Department departLab = new Department (Departments[5]);
 	public static final Department departManagement = new Department (Departments[6]);
 	
+	public static Department getDepartByNumber (int number) {
+		Department tmp;
+		switch (number) {
+		case 1:
+			tmp = departSales;
+			break;
+		case 2:
+			tmp = departTechnical;
+			break;
+		case 3:
+			tmp = departGeneralAffairs;
+			break;
+		case 4:
+			tmp = departHumanResource;
+			break;
+		case 5:
+			tmp = departLab;
+			break;
+		case 6:
+			tmp = departManagement;
+			break;
+		default :
+			tmp = departUnknown;
+		}
+		return tmp;
+	}
+	
 	public int getCommission() {
 		return this.commission;
 	}
